@@ -12,6 +12,9 @@ using IdentityUser = Microsoft.AspNetCore.Identity.IdentityUser;
 
 namespace Infrastructure.Persistence;
 
+/// <summary>
+/// This is the context of your application database. This is where we config our context
+/// </summary>
 public class ApplicationDbContext : OAuthDbContext<IdentityUser>, IApplicationDbContext
 {
     
@@ -29,6 +32,8 @@ public class ApplicationDbContext : OAuthDbContext<IdentityUser>, IApplicationDb
         _auditableEntityInterceptor = auditableEntityInterceptor;
     }
     
+    public DbSet<Game> Games => Set<Game>();
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
@@ -46,7 +51,11 @@ public class ApplicationDbContext : OAuthDbContext<IdentityUser>, IApplicationDb
         optionsBuilder.AddInterceptors(_auditableEntityInterceptor);
     }
     
-    public DbSet<Game> Games => Set<Game>();
+    /// <summary>
+    /// This will migrate db. So save the changes made in the context into the db
+    /// </summary>
+    /// <param name="cancellationToken"></param>
+    /// <returns></returns>
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {
         await _mediator.DispatchDomainEvents(this);

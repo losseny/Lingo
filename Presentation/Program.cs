@@ -1,8 +1,6 @@
+using Application;
 using Infrastructure;
 using lingo;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using lingo.Data;
 
 // Maakt een pre-config van WebApplicationBuilder om waarschinlijk een een container/context op te bouwen
 var builder = WebApplication.CreateBuilder(args); 

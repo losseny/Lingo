@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\losseny\\RiderProjects\\lingo\\Domain\\Domain.csproj": {}
+    "C:\\Users\\user\\RiderProjects\\Lingo\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\losseny\\RiderProjects\\lingo\\Domain\\Domain.csproj": {
+    "C:\\Users\\user\\RiderProjects\\Lingo\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\losseny\\RiderProjects\\lingo\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\user\\RiderProjects\\Lingo\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\losseny\\RiderProjects\\lingo\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\losseny\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\losseny\\RiderProjects\\lingo\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\user\\RiderProjects\\Lingo\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\RiderProjects\\Lingo\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\losseny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,6 +43,10 @@
             "MediatR": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
